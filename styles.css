@@ -1,0 +1,216 @@
+*{
+  padding:20px;
+  border:5px;
+}
+.headerbanner{
+  color:white;
+  background-image: url(headerbanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+.headerbanner h1{
+  font-size: 50px;
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  font-family: fantasy;
+  font-weight: bold;
+}
+footer{
+  background-image: url(footerbanner3.jpg);
+  background-repeat: no-repeat;
+  background-size:   cover;
+
+
+}
+footer p {
+  color:white;
+  text-align: center;
+  font-size:40px;
+  -webkit-text-stroke: 1px black;
+  font-family: fantasy;
+  font-weight: bold;
+
+}
+.indexgrid{
+  display:grid;
+  grid-gap:20px;
+  grid-template-areas:
+  "indeximg HomeParagraph HomeParagraph"
+  "indexcard HomeParagraph HomeParagraph"
+  ;
+}
+.indeximg{
+  grid-area:indeximg;
+
+}
+.indeximg img{
+  width: 600px;
+  height:600px;
+}
+.indexcard{
+  grid-area:indexcard;
+}
+.card{
+  width: 400px;
+  height:400px;
+  text-align: center;
+}
+.HomeParagraph{
+  grid-area:HomeParagraph;
+  background-color: grey;
+}
+.HomeParagraph h1,.whoiam h1,.whereiamfrom h1, .myhobbies h1, .contactme h1, .workpageheader h1{
+  font-family: fantasy;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 2px 2px 2px black, 5px 5px 5px black;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-style:   solid;
+}
+.HomeParagraph p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  -webkit-text-stroke: 2px black;
+
+}
+.whoiam p, .whereiamfrom p, .myhobbies p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  -webkit-text-stroke: 2px black;
+
+}
+.aboutmegrid{
+  display: grid;
+  grid-gap:20px;
+  grid-template-areas:
+  "whoiam  whoiamimg"
+  "whereiamfrom map"
+  "myhobbies slideshow";
+}
+.whoiam{
+  grid-area:whoiam;
+  background-color: grey;
+  width:100%;
+}
+.whoiamimg{
+  grid-area:whoiamimg;
+  background-color: black;
+}
+.whoiamimg img{
+  width:900px;
+  height:900px;;
+}
+.whereiamfrom{
+  grid-area:whereiamfrom;
+  background-color: grey;
+}
+.map{
+  grid-area:map;
+  float: right;
+  background-color: black;
+}
+iframe{
+  text-align: center;
+  width:1000px;
+  height:1000px;
+}
+.myhobbies{
+  grid-area:myhobbies;
+  background-color: grey;
+}
+.slideshow{
+  grid-area:slideshow;
+  background-color: black;
+}
+.carousel{
+width:90%
+
+}
+.contactme h1 {
+  background-color: grey;
+
+}
+.accordion-flush{
+  text-align: center;
+  background-color:black;
+}
+.workcards{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.card>.card-img-top{
+  height:300px;
+  width:300px;
+  position: relative;
+  left:125px;
+}
+.card{
+  height:40rem;
+  width:40rem;
+}
+.workpageheader h1{
+  background-color: grey;
+}
+@media screen and (max-width:768px){
+  *{
+    padding:8px;
+    border:2px;
+  }
+
+  .indexgrid{
+    grid-template-areas:
+    "indeximg"
+    "indexcard"
+    "HomeParagraph";
+  }
+  .indexcard,.indeximg,.HomeParagraph{
+    width:50%
+  }
+  .indeximg ,.indexcard,.HomeParagraph{
+    width:50%;
+  }
+  .aboutmegrid{
+    grid-template-areas:
+    "whoiam"
+    "whoiamimg"
+    "whereiamfrom"
+    "map"
+    "myhobbies"
+    "slideshow";
+
+  }
+  .whoiam,.whoiamimg,.whereiamfrom,.map,.myhobbies,.slideshow{
+    width:100%;
+  }
+  iframe{
+    height:200px;
+    width:400px;
+  }
+  .whoiamimg img{
+    height:300px;
+    width:400px;
+
+  }
+  #carouselExampleSlidesOnly{
+    display:none;
+  }
+  .workcards{
+    flex-direction: column;
+  }
+  .card{
+    height:40rem;
+    width:40rem;
+
+  }
+}
